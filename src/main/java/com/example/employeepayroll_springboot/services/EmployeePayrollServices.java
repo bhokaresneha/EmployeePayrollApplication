@@ -42,6 +42,7 @@ public class EmployeePayrollServices {
 
     public void deleteEmployee(int id) {
         employeePayrollRepository.deleteById(id);
+
     }
 
 }
