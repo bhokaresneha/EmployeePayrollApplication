@@ -24,33 +24,37 @@ public class EmployeePayrollServices implements IEmployeePayrolllServices {
 //        return employeePayrollRepository.save(employee);
 //    }
 
+    private List<EmployeePayroll> empDataList = new ArrayList<>();
+
     public List<EmployeePayroll>getEmployeePayrollData() {
-        List<EmployeePayroll> empDataList = new ArrayList<>();
-        empDataList.add(new EmployeePayroll(1, new EmployeePayrollDTO("Sneha Bhokare", "Female", "Sales", 35000)));
+
         return empDataList;
     }
     public EmployeePayroll getEmployeeById(int id) {
-        EmployeePayroll empData;
-        empData=new EmployeePayroll(1,new EmployeePayrollDTO("Sneha Bhokare", "Female", "Sales", 35000));
-       return empData;
+       return empDataList.get(id-1);
     }
 
 
     public EmployeePayroll createEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
         EmployeePayroll empData;
-        empData = new EmployeePayroll(1, new EmployeePayrollDTO("Sneha Bhokare", "Female", "Sales", 35000));
+        empData = new EmployeePayroll(empDataList.size()+1,employeePayrollDTO);
+       empDataList.add(empData);
         return empData;
     }
 
-    public EmployeePayroll editEmployee(EmployeePayrollDTO employeePayrollDTO) {
-       EmployeePayroll empData;
-       empData=new EmployeePayroll(1,employeePayrollDTO);
+    public EmployeePayroll editEmployee(int id,EmployeePayrollDTO employeePayrollDTO) {
+       EmployeePayroll empData=this.getEmployeeById(id);
+       empData.setName(employeePayrollDTO.name);
+       empData.setDepartment(employeePayrollDTO.department);
+       empData.setGender(employeePayrollDTO.gender);
+       empData.setSalary(employeePayrollDTO.salary);
+       empDataList.set(id-1,empData);
        return empData;
     }
 
-    public void deleteEmployee(int id) {
-
-
+    public void deleteEmployee(int id)
+    {
+        empDataList.remove(id-1);
     }
 
 }
