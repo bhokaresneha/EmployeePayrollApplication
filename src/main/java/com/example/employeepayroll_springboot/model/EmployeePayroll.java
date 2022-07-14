@@ -1,11 +1,17 @@
 package com.example.employeepayroll_springboot.model;
 
 import com.example.employeepayroll_springboot.dto.EmployeePayrollDTO;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 public class EmployeePayroll {
     @Id
@@ -17,6 +23,7 @@ public class EmployeePayroll {
     String department;
     String gender;
 
+
     public EmployeePayroll(int id, EmployeePayrollDTO employeePayrollDTO) {
         this.id=id;
         this.name= employeePayrollDTO.name;
@@ -25,49 +32,4 @@ public class EmployeePayroll {
         this.salary=employeePayrollDTO.salary;
     }
 
-    public EmployeePayroll() {
-
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Long getSalary() {
-        return salary;
-    }
-
-    public void setSalary(Long salary) {
-        this.salary = salary;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-
-    public Integer getId() {
-        return id;
-    }
 }
