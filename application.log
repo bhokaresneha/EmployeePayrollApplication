@@ -338,7 +338,145 @@ java.lang.NumberFormatException: For input string: "sneha"
 2022-2022-07 11:29 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:15] Using Lombok Library for Logging
 2022-2022-07 11:29 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:17] Employee Payroll App Started in dev_ Environment
 2022-2022-07 11:29 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:20] Employee Payroll DB User is root
-
+2022-2022-07 13:02 [WARN][HikariPool-1 housekeeper][c.z.h.p.HikariPool:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56m47s328ms254µs200ns).
+2022-2022-07 13:29 [WARN][HikariPool-1 housekeeper][c.z.h.p.HikariPool:788] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=23m20s761ms567µs400ns).
+2022-2022-07 14:35 [INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-2022-07 14:35 [INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2022-2022-07 14:35 [INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2022-2022-07 14:35 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:55] Starting EmployeePayrollSpringBootApplication using Java 11.0.15.1 on DESKTOP-D0CP3DQ with PID 2516 (D:\SpringBoot\EmployeePayroll_SpringBoot\target\classes started by Admin in D:\SpringBoot\EmployeePayroll_SpringBoot)
+2022-2022-07 14:35 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:640] The following 1 profile is active: "dev"
+2022-2022-07 14:35 [INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-2022-07 14:35 [INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-2022-07 14:35 [INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-2022-07 14:35 [INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2022-2022-07 14:35 [INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108] Tomcat initialized with port(s): 8081 (http)
+2022-2022-07 14:35 [INFO][restartedMain][o.a.c.c.StandardService:173] Starting service [Tomcat]
+2022-2022-07 14:35 [INFO][restartedMain][o.a.c.c.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-2022-07 14:35 [INFO][restartedMain][o.a.c.c.C.[.[.[/]:173] Initializing Spring embedded WebApplicationContext
+2022-2022-07 14:35 [INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 1289 ms
+2022-2022-07 14:35 [INFO][restartedMain][o.h.j.i.u.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-2022-07 14:35 [INFO][restartedMain][o.h.Version:44] HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-2022-07 14:35 [INFO][restartedMain][o.h.a.c.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-2022-07 14:35 [INFO][restartedMain][c.z.h.HikariDataSource:110] HikariPool-1 - Starting...
+2022-2022-07 14:35 [INFO][restartedMain][c.z.h.HikariDataSource:123] HikariPool-1 - Start completed.
+2022-2022-07 14:35 [INFO][restartedMain][o.h.d.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-2022-07 14:35 [INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-2022-07 14:35 [INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-2022-07 14:35 [WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-2022-07 14:35 [WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-2022-07 14:35 [INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:58] LiveReload server is running on port 35729
+2022-2022-07 14:35 [INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220] Tomcat started on port(s): 8081 (http) with context path ''
+2022-2022-07 14:35 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:61] Started EmployeePayrollSpringBootApplication in 3.5 seconds (JVM running for 4.47)
+2022-2022-07 14:35 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:15] Using Lombok Library for Logging
+2022-2022-07 14:35 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:17] Employee Payroll App Started in dev_ Environment
+2022-2022-07 14:35 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:20] Employee Payroll DB User is root
+2022-2022-07 14:36 [INFO][http-nio-8081-exec-2][o.a.c.c.C.[.[.[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-2022-07 14:36 [INFO][http-nio-8081-exec-2][o.s.w.s.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2022-2022-07 14:36 [INFO][http-nio-8081-exec-2][o.s.w.s.DispatcherServlet:547] Completed initialization in 6 ms
+2022-2022-07 14:36 [WARN][http-nio-8081-exec-3][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.example.employeepayroll_springboot.dto.ResponseDTO> com.example.employeepayroll_springboot.controller.EmployeePayrollController.addEmployeePayrollData(com.example.employeepayroll_springboot.dto.EmployeePayrollDTO): [Field error in object 'employeePayrollDTO' on field 'name': rejected value [sneha]; codes [Pattern.employeePayrollDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.name,name]; arguments []; default message [name],[Ljavax.validation.constraints.Pattern$Flag;@705a1ec2,^[A-Z]{1}[a-zA-Z\s]{2,}$]; default message [Employee Name Invalid]] ]
+2022-2022-07 14:36 [WARN][http-nio-8081-exec-8][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.example.employeepayroll_springboot.dto.ResponseDTO> com.example.employeepayroll_springboot.controller.EmployeePayrollController.addEmployeePayrollData(com.example.employeepayroll_springboot.dto.EmployeePayrollDTO): [Field error in object 'employeePayrollDTO' on field 'name': rejected value []; codes [Pattern.employeePayrollDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.name,name]; arguments []; default message [name],[Ljavax.validation.constraints.Pattern$Flag;@705a1ec2,^[A-Z]{1}[a-zA-Z\s]{2,}$]; default message [Employee Name Invalid]] ]
+2022-2022-07 14:36 [WARN][http-nio-8081-exec-4][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.example.employeepayroll_springboot.dto.ResponseDTO> com.example.employeepayroll_springboot.controller.EmployeePayrollController.addEmployeePayrollData(com.example.employeepayroll_springboot.dto.EmployeePayrollDTO): [Field error in object 'employeePayrollDTO' on field 'name': rejected value []; codes [Pattern.employeePayrollDTO.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.name,name]; arguments []; default message [name],[Ljavax.validation.constraints.Pattern$Flag;@705a1ec2,^[A-Z]{1}[a-zA-Z\s]{2,}$]; default message [Employee Name Invalid]] ]
+2022-2022-07 14:38 [INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-2022-07 14:38 [INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2022-2022-07 14:38 [INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2022-2022-07 14:38 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:55] Starting EmployeePayrollSpringBootApplication using Java 11.0.15.1 on DESKTOP-D0CP3DQ with PID 15700 (D:\SpringBoot\EmployeePayroll_SpringBoot\target\classes started by Admin in D:\SpringBoot\EmployeePayroll_SpringBoot)
+2022-2022-07 14:38 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:640] The following 1 profile is active: "dev"
+2022-2022-07 14:38 [INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-2022-07 14:38 [INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-2022-07 14:38 [INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-2022-07 14:38 [INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+2022-2022-07 14:38 [INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108] Tomcat initialized with port(s): 8081 (http)
+2022-2022-07 14:38 [INFO][restartedMain][o.a.c.c.StandardService:173] Starting service [Tomcat]
+2022-2022-07 14:38 [INFO][restartedMain][o.a.c.c.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-2022-07 14:38 [INFO][restartedMain][o.a.c.c.C.[.[.[/]:173] Initializing Spring embedded WebApplicationContext
+2022-2022-07 14:38 [INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 1109 ms
+2022-2022-07 14:38 [INFO][restartedMain][o.h.j.i.u.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-2022-07 14:38 [INFO][restartedMain][o.h.Version:44] HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-2022-07 14:38 [INFO][restartedMain][o.h.a.c.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-2022-07 14:38 [INFO][restartedMain][c.z.h.HikariDataSource:110] HikariPool-1 - Starting...
+2022-2022-07 14:38 [INFO][restartedMain][c.z.h.HikariDataSource:123] HikariPool-1 - Start completed.
+2022-2022-07 14:38 [INFO][restartedMain][o.h.d.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-2022-07 14:38 [INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-2022-07 14:38 [INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-2022-07 14:38 [WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-2022-07 14:38 [WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-2022-07 14:38 [INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:58] LiveReload server is running on port 35729
+2022-2022-07 14:38 [INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220] Tomcat started on port(s): 8081 (http) with context path ''
+2022-2022-07 14:38 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:61] Started EmployeePayrollSpringBootApplication in 3.179 seconds (JVM running for 4.095)
+2022-2022-07 14:38 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:15] Using Lombok Library for Logging
+2022-2022-07 14:38 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:17] Employee Payroll App Started in dev_ Environment
+2022-2022-07 14:38 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:20] Employee Payroll DB User is root
+2022-2022-07 14:38 [INFO][http-nio-8081-exec-4][o.a.c.c.C.[.[.[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-2022-07 14:38 [INFO][http-nio-8081-exec-4][o.s.w.s.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2022-2022-07 14:38 [INFO][http-nio-8081-exec-4][o.s.w.s.DispatcherServlet:547] Completed initialization in 0 ms
+2022-2022-07 14:38 [WARN][http-nio-8081-exec-4][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.example.employeepayroll_springboot.dto.ResponseDTO> com.example.employeepayroll_springboot.controller.EmployeePayrollController.addEmployeePayrollData(com.example.employeepayroll_springboot.dto.EmployeePayrollDTO): [Field error in object 'employeePayrollDTO' on field 'name': rejected value [null]; codes [NotNull.employeePayrollDTO.name,NotNull.name,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.name,name]; arguments []; default message [name]]; default message [Employee Name cannot be null]] ]
+2022-2022-07 15:03 [INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-2022-07 15:03 [INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2022-2022-07 15:03 [INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2022-2022-07 15:03 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:55] Starting EmployeePayrollSpringBootApplication using Java 11.0.15.1 on DESKTOP-D0CP3DQ with PID 8472 (D:\SpringBoot\EmployeePayroll_SpringBoot\target\classes started by Admin in D:\SpringBoot\EmployeePayroll_SpringBoot)
+2022-2022-07 15:03 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:640] The following 1 profile is active: "dev"
+2022-2022-07 15:03 [INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-2022-07 15:03 [INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-2022-07 15:03 [INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-2022-07 15:03 [INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2022-2022-07 15:03 [INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108] Tomcat initialized with port(s): 8081 (http)
+2022-2022-07 15:03 [INFO][restartedMain][o.a.c.c.StandardService:173] Starting service [Tomcat]
+2022-2022-07 15:03 [INFO][restartedMain][o.a.c.c.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-2022-07 15:03 [INFO][restartedMain][o.a.c.c.C.[.[.[/]:173] Initializing Spring embedded WebApplicationContext
+2022-2022-07 15:03 [INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 1130 ms
+2022-2022-07 15:03 [INFO][restartedMain][o.h.j.i.u.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-2022-07 15:03 [INFO][restartedMain][o.h.Version:44] HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-2022-07 15:03 [INFO][restartedMain][o.h.a.c.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-2022-07 15:03 [INFO][restartedMain][c.z.h.HikariDataSource:110] HikariPool-1 - Starting...
+2022-2022-07 15:03 [INFO][restartedMain][c.z.h.HikariDataSource:123] HikariPool-1 - Start completed.
+2022-2022-07 15:03 [INFO][restartedMain][o.h.d.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-2022-07 15:03 [INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-2022-07 15:03 [INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-2022-07 15:03 [WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-2022-07 15:03 [WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-2022-07 15:03 [INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:58] LiveReload server is running on port 35729
+2022-2022-07 15:03 [INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220] Tomcat started on port(s): 8081 (http) with context path ''
+2022-2022-07 15:03 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:61] Started EmployeePayrollSpringBootApplication in 3.469 seconds (JVM running for 4.393)
+2022-2022-07 15:03 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:15] Using Lombok Library for Logging
+2022-2022-07 15:03 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:17] Employee Payroll App Started in dev_ Environment
+2022-2022-07 15:03 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:20] Employee Payroll DB User is root
+2022-2022-07 15:03 [INFO][http-nio-8081-exec-4][o.a.c.c.C.[.[.[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-2022-07 15:03 [INFO][http-nio-8081-exec-4][o.s.w.s.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2022-2022-07 15:03 [INFO][http-nio-8081-exec-4][o.s.w.s.DispatcherServlet:547] Completed initialization in 0 ms
+2022-2022-07 15:04 [INFO][SpringApplicationShutdownHook][o.s.o.j.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-2022-07 15:04 [INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+2022-2022-07 15:04 [INFO][SpringApplicationShutdownHook][c.z.h.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+2022-2022-07 15:04 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:55] Starting EmployeePayrollSpringBootApplication using Java 11.0.15.1 on DESKTOP-D0CP3DQ with PID 15076 (D:\SpringBoot\EmployeePayroll_SpringBoot\target\classes started by Admin in D:\SpringBoot\EmployeePayroll_SpringBoot)
+2022-2022-07 15:04 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:640] The following 1 profile is active: "dev"
+2022-2022-07 15:04 [INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-2022-07 15:04 [INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-2022-07 15:04 [INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-2022-07 15:04 [INFO][restartedMain][o.s.d.r.c.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interfaces.
+2022-2022-07 15:04 [INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:108] Tomcat initialized with port(s): 8081 (http)
+2022-2022-07 15:04 [INFO][restartedMain][o.a.c.c.StandardService:173] Starting service [Tomcat]
+2022-2022-07 15:04 [INFO][restartedMain][o.a.c.c.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.64]
+2022-2022-07 15:04 [INFO][restartedMain][o.a.c.c.C.[.[.[/]:173] Initializing Spring embedded WebApplicationContext
+2022-2022-07 15:04 [INFO][restartedMain][o.s.b.w.s.c.ServletWebServerApplicationContext:292] Root WebApplicationContext: initialization completed in 1143 ms
+2022-2022-07 15:04 [INFO][restartedMain][o.h.j.i.u.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-2022-07 15:04 [INFO][restartedMain][o.h.Version:44] HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-2022-07 15:04 [INFO][restartedMain][o.h.a.c.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-2022-07 15:04 [INFO][restartedMain][c.z.h.HikariDataSource:110] HikariPool-1 - Starting...
+2022-2022-07 15:04 [INFO][restartedMain][c.z.h.HikariDataSource:123] HikariPool-1 - Start completed.
+2022-2022-07 15:04 [INFO][restartedMain][o.h.d.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-2022-07 15:04 [INFO][restartedMain][o.h.e.t.j.p.i.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-2022-07 15:04 [INFO][restartedMain][o.s.o.j.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-2022-07 15:04 [WARN][restartedMain][o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-2022-07 15:04 [WARN][restartedMain][o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration:103] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-2022-07 15:04 [INFO][restartedMain][o.s.b.d.a.OptionalLiveReloadServer:58] LiveReload server is running on port 35729
+2022-2022-07 15:04 [INFO][restartedMain][o.s.b.w.e.t.TomcatWebServer:220] Tomcat started on port(s): 8081 (http) with context path ''
+2022-2022-07 15:04 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:61] Started EmployeePayrollSpringBootApplication in 3.24 seconds (JVM running for 4.134)
+2022-2022-07 15:04 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:15] Using Lombok Library for Logging
+2022-2022-07 15:04 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:17] Employee Payroll App Started in dev_ Environment
+2022-2022-07 15:04 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:20] Employee Payroll DB User is root
+2022-2022-07 15:04 [INFO][http-nio-8081-exec-1][o.a.c.c.C.[.[.[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-2022-07 15:04 [INFO][http-nio-8081-exec-1][o.s.w.s.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+2022-2022-07 15:04 [INFO][http-nio-8081-exec-1][o.s.w.s.DispatcherServlet:547] Completed initialization in 0 ms
+2022-2022-07 15:04 [WARN][http-nio-8081-exec-1][o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver:208] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.example.employeepayroll_springboot.dto.ResponseDTO> com.example.employeepayroll_springboot.controller.EmployeePayrollController.addEmployeePayrollData(com.example.employeepayroll_springboot.dto.EmployeePayrollDTO): [Field error in object 'employeePayrollDTO' on field 'name': rejected value [null]; codes [NotNull.employeePayrollDTO.name,NotNull.name,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [employeePayrollDTO.name,name]; arguments []; default message [name]]; default message [Employee Name cannot be null]] ]
 2022-2022-07 16:01 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:55] Starting EmployeePayrollSpringBootApplication using Java 11.0.15.1 on DESKTOP-D0CP3DQ with PID 21360 (D:\SpringBoot\EmployeePayroll_SpringBoot\target\classes started by Admin in D:\SpringBoot\EmployeePayroll_SpringBoot)
 2022-2022-07 16:01 [INFO][restartedMain][c.e.e.EmployeePayrollSpringBootApplication:640] The following 1 profile is active: "dev"
 2022-2022-07 16:01 [INFO][restartedMain][o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
