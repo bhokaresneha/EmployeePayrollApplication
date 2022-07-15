@@ -11,9 +11,14 @@ import org.springframework.context.ApplicationContext;
 public class EmployeePayrollSpringBootApplication {
 
     public static void main(String[] args) {
-        ApplicationContext context =  SpringApplication.run(EmployeePayrollSpringBootApplication.class, args);
+        ApplicationContext context = SpringApplication.run(EmployeePayrollSpringBootApplication.class, args);
+        log.info("Using Lombok Library for Logging");
+     //uc-8
         log.info("Employee Payroll App Started in {} Environment",
                 context.getEnvironment().getProperty("environment"));
+     //uc-9
+        log.info("Employee Payroll DB User is {}",
+                context.getEnvironment().getProperty("spring.datasource.username"));
 
 
     }
