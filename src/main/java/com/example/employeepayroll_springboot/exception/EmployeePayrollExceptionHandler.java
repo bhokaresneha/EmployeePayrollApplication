@@ -1,8 +1,10 @@
 package com.example.employeepayroll_springboot.exception;
 
 import com.example.employeepayroll_springboot.dto.ResponseDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -12,7 +14,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @ControllerAdvice
+@Slf4j
 public class EmployeePayrollExceptionHandler {
+    private final static String message = "Exception while processing REST request";
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ResponseDTO> handleMethodArgumentNotValidException(
             MethodArgumentNotValidException exception) {
@@ -20,13 +25,20 @@ public class EmployeePayrollExceptionHandler {
         List<String> errMsg = errorList.stream()
                 .map(objErr -> objErr.getDefaultMessage())
                 .collect(Collectors.toList());
-        ResponseDTO respDTO = new ResponseDTO("Exception while processing REST request", errMsg);
+        ResponseDTO respDTO = new ResponseDTO(message, errMsg);
         return new ResponseEntity<>(respDTO, HttpStatus.BAD_REQUEST);
     }
+
     @ExceptionHandler(EmployeePayrollException.class)
-    public ResponseEntity<ResponseDTO> handleEmployeePayrollException(EmployeePayrollException exception){
-        ResponseDTO respDTO = new ResponseDTO("Exception while processing REST request",
-                exception.getMessage());
+    public ResponseEntity<ResponseDTO> handleEmployeePayrollException(EmployeePayrollException exception) {
+        ResponseDTO respDTO = new ResponseDTO(message, exception.getMessage());
         return new ResponseEntity<>(respDTO, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(HttpMessageNotReadableException.class)
+    public ResponseEntity<ResponseDTO> handleHttpMessageNotReadableException(HttpMessageNotReadableException exception) {
+        log.error("Invalid Date Format", exception);
+        ResponseDTO responseDTO = new ResponseDTO(message, "Should have date in the Format dd MMM yyyy");
+        return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.BAD_REQUEST);
     }
 }
