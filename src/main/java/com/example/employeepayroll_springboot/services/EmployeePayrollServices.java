@@ -2,6 +2,7 @@ package com.example.employeepayroll_springboot.services;
 
 import com.example.employeepayroll_springboot.dto.EmployeePayrollDTO;
 import com.example.employeepayroll_springboot.dto.ResponseDTO;
+import com.example.employeepayroll_springboot.exception.EmployeePayrollException;
 import com.example.employeepayroll_springboot.model.EmployeePayroll;
 import com.example.employeepayroll_springboot.repository.EmployeePayrollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,10 @@ public class EmployeePayrollServices implements IEmployeePayrolllServices {
         return empDataList;
     }
     public EmployeePayroll getEmployeeById(int id) {
-       return empDataList.get(id-1);
+        return empDataList.stream()
+                .filter(empData -> empData.getId() == id)
+                .findFirst()
+                .orElseThrow(() -> new EmployeePayrollException("Employee not found!"));
     }
 
 
