@@ -9,6 +9,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -53,8 +54,7 @@ public class EmployeePayrollController {
     @RequestMapping(value = {"", "/ ", "get"})
 
     public ResponseEntity<ResponseDTO> getEmployeePayrollData() {
-        List <EmployeePayroll> empDatalist ;
-        empDatalist = employeePayrollServices.getEmployeePayrollData();
+        List <EmployeePayroll> empDatalist=employeePayrollServices.getEmployeePayrollData();
         ResponseDTO respOTO = new ResponseDTO("Get Call Successful", empDatalist);
         return new ResponseEntity<ResponseDTO>(respOTO, HttpStatus.OK);
     }
@@ -62,22 +62,20 @@ public class EmployeePayrollController {
 
     @GetMapping("/get/{empId}")
     public ResponseEntity<ResponseDTO> getEmployeePayrollData(@PathVariable("empId") int empId) {
-        EmployeePayroll empData;
-        empData= employeePayrollServices.getEmployeeById(empId);
+        EmployeePayroll empData= employeePayrollServices.getEmployeeById(empId);
         ResponseDTO respDTO= new ResponseDTO("Get Call For ID Successful", empData);
         return new ResponseEntity<ResponseDTO>(respDTO, HttpStatus.OK);
     }
+
     @PostMapping("/create")
-    public ResponseEntity<ResponseDTO> addEmployeePayrollData(@RequestBody EmployeePayrollDTO empPayrollDTO) {
-        EmployeePayroll  empData;
-        empData= employeePayrollServices.createEmployeePayrollData(empPayrollDTO);
+    public ResponseEntity<ResponseDTO> addEmployeePayrollData(@Valid @RequestBody EmployeePayrollDTO empPayrollDTO) {
+        EmployeePayroll empData= employeePayrollServices.createEmployeePayrollData(empPayrollDTO);
         ResponseDTO respDTO= new ResponseDTO("Created Employee Payroll Data Successfully", empData);
         return new ResponseEntity<ResponseDTO>(respDTO, HttpStatus.OK);
     }
     @PutMapping("/update/{id}")
     public ResponseEntity<ResponseDTO> updateEmployeePayrollData(@PathVariable("id")int id,@RequestBody EmployeePayrollDTO empPayrollDTO) {
-        EmployeePayroll empData;
-        empData= employeePayrollServices.editEmployee(id,empPayrollDTO);
+        EmployeePayroll empData = employeePayrollServices.editEmployee(id,empPayrollDTO);
         ResponseDTO respDTO= new ResponseDTO("Updated Employee Payroll Data Successfully", empData);
         return new ResponseEntity<ResponseDTO>(respDTO, HttpStatus.OK);
     }
