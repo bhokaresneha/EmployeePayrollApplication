@@ -14,8 +14,8 @@ import java.util.List;
 @Service
 public class EmployeePayrollServices implements IEmployeePayrolllServices {
 
-//    @Autowired
-//    EmployeePayrollRepository employeePayrollRepository;
+    @Autowired
+    EmployeePayrollRepository employeePayrollRepository;
 //    public String displayMessage(){
 //        return "Welcome to Employee Payroll Application";
 //    }
@@ -35,10 +35,10 @@ public class EmployeePayrollServices implements IEmployeePayrolllServices {
     }
 
 
+
     public EmployeePayroll createEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
-        EmployeePayroll empData;
-        empData = new EmployeePayroll(empDataList.size()+1,employeePayrollDTO);
-       empDataList.add(empData);
+        EmployeePayroll empData = new EmployeePayroll(empDataList.size()+1,employeePayrollDTO);
+        empDataList.add(empData);
         return empData;
     }
 
