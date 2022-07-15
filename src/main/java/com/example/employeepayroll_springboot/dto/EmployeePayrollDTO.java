@@ -1,19 +1,19 @@
 package com.example.employeepayroll_springboot.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import java.time.LocalDate;
+import java.util.List;
 
 //@Getter
 //@Setter
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class EmployeePayrollDTO {
 
     @NotNull(message = "Employee Name cannot be null")
@@ -22,9 +22,17 @@ public class EmployeePayrollDTO {
     @NotNull(message = "Employee Gender cannot be null")
     public String gender;
     @NotNull(message = "Employee Department cannot be null")
-    public String department;
+    public List<String> department;
     @Min(value = 500, message = "Min Wage should be more than 500")
     public long salary;
+
+    @NotNull(message = "Employee ProfilePic cannot be null")
+    public String profilePic;
+
+    @NotNull(message = "Employee Note cannot be null")
+    public String note;
+
+    public LocalDate startDate;
 
 
 
