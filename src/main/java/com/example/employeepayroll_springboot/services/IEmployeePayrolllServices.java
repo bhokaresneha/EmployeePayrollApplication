@@ -4,11 +4,12 @@ import com.example.employeepayroll_springboot.dto.EmployeePayrollDTO;
 import com.example.employeepayroll_springboot.model.EmployeePayroll;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IEmployeePayrolllServices {
 
     List<EmployeePayroll> getEmployeePayrollData();
-    EmployeePayroll getEmployeeById(int id);
+    Optional<EmployeePayroll> getEmployeeById(int id);
     EmployeePayroll createEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO);
     EmployeePayroll editEmployee(int id,EmployeePayrollDTO employeePayrollDTO);
     void deleteEmployee(int id);

@@ -1,15 +1,13 @@
 package com.example.employeepayroll_springboot.services;
 
 import com.example.employeepayroll_springboot.dto.EmployeePayrollDTO;
-import com.example.employeepayroll_springboot.dto.ResponseDTO;
-import com.example.employeepayroll_springboot.exception.EmployeePayrollException;
 import com.example.employeepayroll_springboot.model.EmployeePayroll;
 import com.example.employeepayroll_springboot.repository.EmployeePayrollRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -25,17 +23,13 @@ public class EmployeePayrollServices implements IEmployeePayrolllServices {
 //        return employeePayrollRepository.save(employee);
 //    }
 
-    private List<EmployeePayroll> empDataList = new ArrayList<>();
 
     public List<EmployeePayroll>getEmployeePayrollData() {
+      return  employeePayrollRepository.findAll();
 
-        return empDataList;
     }
-    public EmployeePayroll getEmployeeById(int id) {
-        return empDataList.stream()
-                .filter(empData -> empData.getId() == id)
-                .findFirst()
-                .orElseThrow(() -> new EmployeePayrollException("Employee not found!"));
+    public Optional<EmployeePayroll> getEmployeeById(int id) {
+        return employeePayrollRepository.findById(id);
     }
 
 
@@ -48,18 +42,22 @@ public class EmployeePayrollServices implements IEmployeePayrolllServices {
     }
 
     public EmployeePayroll editEmployee(int id,EmployeePayrollDTO employeePayrollDTO) {
-       EmployeePayroll empData=this.getEmployeeById(id);
-       empData.setName(employeePayrollDTO.name);
-       empData.setDepartment(employeePayrollDTO.department);
-       empData.setGender(employeePayrollDTO.gender);
-       empData.setSalary(employeePayrollDTO.salary);
-       empDataList.set(id-1,empData);
-       return empData;
+        EmployeePayroll existingEmployee = employeePayrollRepository.findById(id).orElse(null);
+        if (existingEmployee != null) {
+            existingEmployee.setName(employeePayrollDTO.getName());
+            existingEmployee.setDepartment(employeePayrollDTO.getDepartment());
+            existingEmployee.setGender(employeePayrollDTO.getGender());
+            existingEmployee.setSalary(employeePayrollDTO.getSalary());
+            existingEmployee.setProfilePic(employeePayrollDTO.getProfilePic());
+            existingEmployee.setNote(employeePayrollDTO.getNote());
+            employeePayrollRepository.save(existingEmployee);
+            return existingEmployee;
+        }else return null;
     }
 
     public void deleteEmployee(int id)
     {
-        empDataList.remove(id-1);
+        employeePayrollRepository.deleteById(id);
     }
 
 }
