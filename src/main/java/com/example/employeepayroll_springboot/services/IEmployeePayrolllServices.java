@@ -13,4 +13,6 @@ public interface IEmployeePayrolllServices {
     EmployeePayroll createEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO);
     EmployeePayroll editEmployee(int id,EmployeePayrollDTO employeePayrollDTO);
     void deleteEmployee(int id);
+
+     List<EmployeePayroll> getEmployeeByDepartment(String department);
 }

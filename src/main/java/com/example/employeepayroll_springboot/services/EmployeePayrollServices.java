@@ -59,5 +59,10 @@ public class EmployeePayrollServices implements IEmployeePayrolllServices {
     {
         employeePayrollRepository.deleteById(id);
     }
+    public List<EmployeePayroll> getEmployeeByDepartment(String department)
+    {
+        return employeePayrollRepository.findEmployeeByDepartment(department);
+
+    }
 
 }

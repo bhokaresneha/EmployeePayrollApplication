@@ -14,7 +14,6 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-//@RequestMapping("/employeepayrollservice")
 public class EmployeePayrollController {
 
     @Autowired
@@ -66,6 +65,12 @@ public class EmployeePayrollController {
         return new ResponseEntity<ResponseDTO>(respDTO, HttpStatus.OK);
     }
 
+    @GetMapping("/getByDepartment/{department}")
+    public ResponseEntity<ResponseDTO> getByDepartment(@PathVariable String department) {
+        List<EmployeePayroll> empData= iEmployeePayrolllServices.getEmployeeByDepartment(department);
+        ResponseDTO respDTO= new ResponseDTO("Get Call For Department Successful", empData);
+        return new ResponseEntity<ResponseDTO>(respDTO, HttpStatus.OK);
+    }
     @PostMapping("/create")
     public ResponseEntity<ResponseDTO> addEmployeePayrollData(@Valid @RequestBody EmployeePayrollDTO empPayrollDTO) {
         EmployeePayroll empData= iEmployeePayrolllServices.createEmployeePayrollData(empPayrollDTO);
