@@ -41,8 +41,9 @@ public class EmployeePayrollServices implements IEmployeePayrolllServices {
 
 
     public EmployeePayroll createEmployeePayrollData(EmployeePayrollDTO employeePayrollDTO) {
-        EmployeePayroll empData = new EmployeePayroll(empDataList.size()+1,employeePayrollDTO);
-        empDataList.add(empData);
+        EmployeePayroll empData = new EmployeePayroll(employeePayrollDTO);
+       // empDataList.add(empData);
+        employeePayrollRepository.save(empData);
         return empData;
     }
 

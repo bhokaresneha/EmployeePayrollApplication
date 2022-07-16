@@ -6,10 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -18,22 +15,26 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "employee_payroll")
 public @ToString class EmployeePayroll {
     @Id
+    @Column(name = "employee_id")
     @GeneratedValue
     int id;
-
+    @Column(name = "name")
     String name;
     Long salary;
-    @ElementCollection
-    public List<String> department;
     String gender;
-    String profilePic;
-    String note;
     LocalDate startDate;
 
+    String profilePic;
+    String note;
 
-    public EmployeePayroll(int id, EmployeePayrollDTO employeePayrollDTO) {
+    @CollectionTable(name = "employee_department", joinColumns =@JoinColumn(name = "id"))
+    @ElementCollection
+    public List<String> department;
+
+    public EmployeePayroll(EmployeePayrollDTO employeePayrollDTO) {
         this.id=id;
         this.name= employeePayrollDTO.name;
         this.department=employeePayrollDTO.department;
